@@ -20,7 +20,12 @@ Most people belong to one company at Hire Lexi and you never need to name it. If
 
 ## Pick the slug once per artifact
 
-The slug is the document's permanent name at Lexi, lowercase with dashes: `anderson-spec-book`, `q3-board-deck`. Choose it the first time from what the person calls the thing. Reuse the SAME slug for every later version of the SAME artifact, in this conversation or a new one; that is what keeps the link the same. A different artifact gets a different slug. If unsure whether a slug exists, `read_from_lexi` with no slug lists what is shared.
+The slug is the document's permanent name at Lexi, lowercase with dashes: `anderson-spec-book`, `q3-board-deck`. Choose it the first time from what the person calls the thing, and always pass it. Reuse the SAME slug for every later version of the SAME artifact, in this conversation or a new one; that is the only thing that keeps the link the same. A changed title must never change the slug.
+
+- Updating something that may already be shared (a new conversation, a revised artifact, "send Lexi the new version"): call `read_from_lexi` with no slug FIRST, find the document, and share with its slug.
+- Every share result says which slug to reuse. Use it.
+- If a share answers `"status": "confirm_slug"`, nothing was stored: a document with that title is already shared under another slug. Ask the person whether this is a new version of it (share again with that slug) or a different document (share again with a new slug).
+- A different artifact gets a different slug.
 
 ## How to share
 
@@ -38,7 +43,7 @@ When you later edit the artifact, keep this block exactly as it is at the end of
 <p id="lexi-sync-status" data-lexi-status style="font:12px/1.5 system-ui,-apple-system,sans-serif;color:#8a8a8a;margin:32px 0 8px;text-align:center">Shared with Lexi.</p>
 <script data-lexi-sync>
 (async () => {
-  const SLUG = "REPLACE-WITH-SLUG";      // the document's permanent name at Lexi
+  const SLUG = "REPLACE-WITH-SLUG";      // the document's permanent name at Lexi: fixed, never derived from the title
   const TITLE = "Replace with title";    // what the person calls it
   const CLIENT = null;                   // a client slug, only when the person is on more than one client
   const SERVERS = ["Lexi", "lexi", "Hire Lexi"]; // the connector's name in this Claude
@@ -129,7 +134,7 @@ After any share, tell the person in one line that it is shared and give the link
 
 ### A request riding along
 
-If the person asks Lexi to DO something with it ("put this on our website", "make it a PDF for the client"), pass their words in `request`. Tell them plainly that Lexi has the request and that anything going on a public website is checked with their team first. Never say it is live.
+If the person asks Lexi to DO something with it ("put this on our website", "make it a PDF for the client"), pass their words in `request`. The request is emailed to the Hire Lexi team; nothing is published from Claude. Read `request_delivered` in the result: when it is `true`, tell them the team has the request and will check with them before anything goes on a public website; when it is `false`, tell them plainly the request did not reach the team and to email support@hirelexi.com. Never say it is live.
 
 ## Stop sharing
 

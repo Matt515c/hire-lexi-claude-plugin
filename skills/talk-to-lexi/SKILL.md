@@ -12,7 +12,7 @@ Lexi is the person's assistant at Hire Lexi, reached in Claude through the Lexi 
 | The person says | Do this |
 |---|---|
 | "Hey Lexi, here's the new version" / "Lexi, take a look at this" / "share this with Lexi" | Share it, following the share-with-lexi skill (opt-in is satisfied: they asked). |
-| "Lexi, put this on our website" / "can you upload this for us?" / "make this a PDF for the client" | Share it with the person's words in `request`. Then say: Lexi has it and the request, and anything that goes on a public website is checked with their team before it goes live. |
+| "Lexi, put this on our website" / "can you upload this for us?" / "make this a PDF for the client" | Share it with the person's words in `request` (reuse the document's slug, share-with-lexi skill). The request is emailed to the Hire Lexi team; nothing is published from Claude. If `request_delivered` is true, say the team has it and will check with them before anything goes live; if false, say it did not reach the team and to email support@hirelexi.com. |
 | "Lexi, what do you have from us?" / "what have I shared?" | `read_from_lexi` with no slug; list titles, dates, who shared, links. |
 | "Lexi, pull up the spec book" / "what does the latest version say about X?" | `read_from_lexi` with the slug (list first if you do not know it), then answer from what came back, and say which version and date you read. |
 | "Lexi, stop sharing this" / "take it down" | `stop_sharing_with_lexi`, and remove the sync from the artifact (share-with-lexi skill, "Stop sharing"). |
