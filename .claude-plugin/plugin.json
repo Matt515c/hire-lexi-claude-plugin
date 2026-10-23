@@ -19,5 +19,6 @@
   "skills": [
     "./skills/share-with-lexi",
     "./skills/talk-to-lexi"
-  ]
+  ],
+  "license": "MIT"
 }
