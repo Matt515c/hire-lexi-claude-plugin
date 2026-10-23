@@ -125,7 +125,7 @@ A markdown or text document, a short page, notes from this chat, a file in Claud
 
 In Claude Code, read the file and pass its content.
 
-After any share, tell the person in one line that it is shared and give the link from the result.
+After any share, tell the person in one line that it is shared and give the link from the result. Use that link exactly as returned: it ends in a private key (like `.../kitchen-spec-book-k3x9q2ab`), and the page opens nowhere else. Anyone holding the link can open the page, so tell the person to send it only to people who should see it.
 
 ### A request riding along
 
