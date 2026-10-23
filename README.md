@@ -22,4 +22,4 @@ Claude Code (private repo, needs GitHub access):
 claude.ai, Desktop and the phone: until the directory listing, add the connector itself (Settings, Connectors, Add custom connector, URL `https://connect.hirelexi.com/mcp`), or open the prefilled link:
 `https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Lexi&connectorUrl=https%3A%2F%2Fconnect.hirelexi.com%2Fmcp`
 
-Help page and privacy policy: hirelexi.com/claude and hirelexi.com/claude/privacy (hirelexi-site, branch `share-to-lexi-pages`).
+Help page: hirelexi.com/connectors/claude. Privacy: the connectors section of the Hire Lexi privacy policy, hirelexi.com/privacy#connectors (hirelexi-site, branch `share-to-lexi-pages`).
