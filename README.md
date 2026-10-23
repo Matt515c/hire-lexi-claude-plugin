@@ -4,7 +4,7 @@ One install that lets anyone's Claude share artifacts and documents with Lexi, t
 
 Layout copies Canva's plugin (canva-sdks/canva-skills):
 
-- `.mcp.json`: the Lexi connector, `https://brain.hirelexi.com/mcp` (Streamable HTTP; each person signs in with an emailed code; the server is lexi-brain, branch `share-to-lexi`).
+- `.mcp.json`: the Lexi connector, `https://connect.hirelexi.com/mcp` (Streamable HTTP; each person signs in with an emailed code; the server is lexi-brain, branch `share-to-lexi`).
 - `.claude-plugin/plugin.json`: the manifest, listing the two skills.
 - `.claude-plugin/marketplace.json`: makes this repo a one-plugin marketplace, so Claude Code can install it straight from GitHub.
 - `skills/share-with-lexi/SKILL.md`: opt-in sharing, the self-syncing snippet for HTML artifacts (it checks Lexi's fingerprint first and sends only on a real change, and strips Claude's viewer frame exactly as the server does; lexi-brain's `npm run test:connector` checks that), stop sharing, the per-Project "everything here is shared" rule.
@@ -19,7 +19,7 @@ Claude Code (private repo, needs GitHub access):
 /plugin install hire-lexi@hire-lexi
 ```
 
-claude.ai, Desktop and the phone: until the directory listing, add the connector itself (Settings, Connectors, Add custom connector, URL `https://brain.hirelexi.com/mcp`), or open the prefilled link:
-`https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Lexi&connectorUrl=https%3A%2F%2Fbrain.hirelexi.com%2Fmcp`
+claude.ai, Desktop and the phone: until the directory listing, add the connector itself (Settings, Connectors, Add custom connector, URL `https://connect.hirelexi.com/mcp`), or open the prefilled link:
+`https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Lexi&connectorUrl=https%3A%2F%2Fconnect.hirelexi.com%2Fmcp`
 
 Help page and privacy policy: hirelexi.com/claude and hirelexi.com/claude/privacy (hirelexi-site, branch `share-to-lexi-pages`).
