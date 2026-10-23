@@ -1,0 +1,22 @@
+{
+  "name": "hire-lexi",
+  "version": "0.1.0",
+  "description": "Share your artifacts and documents with Lexi, your Hire Lexi assistant, in plain words, and keep them in sync. Each person signs in as themselves and only ever reaches their own company.",
+  "author": {
+    "name": "Hire Lexi"
+  },
+  "homepage": "https://hirelexi.com/claude",
+  "keywords": [
+    "lexi",
+    "hire lexi",
+    "share",
+    "artifacts",
+    "documents",
+    "sync",
+    "assistant"
+  ],
+  "skills": [
+    "./skills/share-with-lexi",
+    "./skills/talk-to-lexi"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "lexi": {
+      "type": "http",
+      "url": "https://brain.hirelexi.com/mcp"
+    }
+  }
+}

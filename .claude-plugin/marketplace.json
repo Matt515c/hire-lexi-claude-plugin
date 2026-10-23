@@ -1,0 +1,17 @@
+{
+  "name": "hire-lexi",
+  "owner": {
+    "name": "Hire Lexi"
+  },
+  "metadata": {
+    "description": "Lexi for Claude",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "hire-lexi",
+      "source": "./",
+      "description": "Share your artifacts and documents with Lexi, your Hire Lexi assistant, in plain words, and keep them in sync."
+    }
+  ]
+}
